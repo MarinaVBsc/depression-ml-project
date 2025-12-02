@@ -1,19 +1,32 @@
-## Depression Risk Detection - ML for Healthcare (Text)
+# Depression Risk Prediction with Machine Learning (Healthcare Project)
 
-Proyecto: Pipeline de Machine Learning para detección de riesgo de depresión/anxiety a partir de textos.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MarinaVBsc/depression-ml-project/blob/main/depression_ml_notebook.ipynb)
 
-Contenido:
-- notebooks/01_depression_ml_colab.ipynb : Notebook listo para Colab.
-- data/raw : datasets originales (no incluidos).
-- models : modelos entrenados.
-- results : figuras y métricas.
+## Descripción
+Este proyecto implementa un **modelo de Machine Learning para la detección de riesgo de depresión y ansiedad** utilizando datos de texto clínico o comportamiento/psicometría.  
+El notebook combina preprocesamiento de texto, vectorización TF-IDF, modelos baseline (Logistic Regression), XGBoost, y técnicas de interpretabilidad (SHAP).
 
-Objetivo: demostrar pipeline reproducible, modelos baseline (Logistic Regression, XGBoost) y explicabilidad (SHAP).
+El objetivo es demostrar habilidades en **ML aplicado a healthcare**, ideal para proyectos de salud digital y análisis de datos clínicos.
 
-Instrucciones rápidas:
-1. Clona repo.
-2. Sube tu kaggle.json a ~/.kaggle/ en Colab.
-3. Ejecuta el notebook `01_depression_ml_colab.ipynb`.
+---
+
+## Dataset
+- El notebook asume un CSV con columnas:
+  - `text`: texto clínico o notas de comportamiento
+  - `label`: etiqueta binaria (0 = sin riesgo, 1 = riesgo de depresión/ansiedad)
+- Puedes usar datasets públicos de salud mental, por ejemplo:
+  - [i2b2 NLP datasets](https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/)  
+  - [Open Depression Dataset](https://www.kaggle.com/datasets)
+- **No se incluyen datos sensibles en este repositorio.**
+
+---
+
+## Requisitos
+Instala las librerías necesarias:
+
+```bash
+pip install pandas numpy scikit-learn xgboost shap nltk spacy joblib matplotlib seaborn
+python -m spacy download en_core_web_sm
 
 
 ## Project structure
